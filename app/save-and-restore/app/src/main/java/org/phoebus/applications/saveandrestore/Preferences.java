@@ -33,15 +33,15 @@ public class Preferences {
     @Preference
     public static String default_search_query;
     @Preference
-    public static String default_title_snapshot_configuration;
+    public static String default_snapshot_name_configuration;
     @Preference
-    public static String default_title_snapshot_format;
+    public static String default_snapshot_name_format;
     @Preference
-    public static String default_title_snapshot_date_format;
+    public static String default_snapshot_name_date_format;
     @Preference
-    public static String default_title_snapshot_pv1;
+    public static String default_snapshot_name_pv1;
     @Preference
-    public static String default_title_snapshot_pv2;
+    public static String default_snapshot_name_pv2;
 
     static
     {

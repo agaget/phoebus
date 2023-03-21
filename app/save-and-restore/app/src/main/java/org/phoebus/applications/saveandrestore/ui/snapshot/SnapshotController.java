@@ -320,21 +320,21 @@ public class SnapshotController {
                     Date now = new Date();
                     formater = new SimpleDateFormat("yy-MM-dd");
                     String defaultTitle="";
-                    if (!Preferences.default_title_snapshot_format.equals("")) {
-                        String[] formatTitle=Preferences.default_title_snapshot_format.split("_");
+                    if (!Preferences.default_snapshot_name_format.equals("")) {
+                        String[] formatTitle=Preferences.default_snapshot_name_format.split("_");
                         for (int index = 0; index < formatTitle.length; index++) {
                             switch (formatTitle[index]) {
                                 case "<date>":
-                                    if (!Preferences.default_title_snapshot_date_format.equals("")){
-                                        formater = new SimpleDateFormat(Preferences.default_title_snapshot_date_format);
+                                    if (!Preferences.default_snapshot_name_date_format.equals("")){
+                                        formater = new SimpleDateFormat(Preferences.default_snapshot_name_date_format);
                                         defaultTitle+=defaultTitle+formater.format(now);
                                     }
                                     break;
                                 case "<pv1>": 
-                                    defaultTitle+=getValueVType(Preferences.default_title_snapshot_pv1,entries);
+                                    defaultTitle+=getValueVType(Preferences.default_snapshot_name_pv1,entries);
                                     break;
                                 case "<pv2>":
-                                    defaultTitle+=getValueVType(Preferences.default_title_snapshot_pv2,entries);
+                                    defaultTitle+=getValueVType(Preferences.default_snapshot_name_pv2,entries);
                                     break;
                                 default:
                                     System.out.println("nothing");
